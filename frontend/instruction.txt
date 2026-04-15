@@ -1,0 +1,2 @@
+npm init vite
+npx create-react-app .
