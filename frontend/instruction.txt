@@ -1,3 +1,5 @@
 npm init vite
 npx create-react-app .
 import icons from react icon
+
+npm i react-responsive-carousel
