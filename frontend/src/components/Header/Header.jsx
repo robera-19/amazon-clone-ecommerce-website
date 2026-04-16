@@ -5,6 +5,8 @@ import { SlLocationPin } from "react-icons/sl";
 import { CiSearch } from "react-icons/ci";
 import { BsCart } from "react-icons/bs";
 
+import LowerHeader from "./LowerHeader";
+
 const Header = () => {
   return (
     <>
@@ -38,7 +40,7 @@ const Header = () => {
             </select>
             <input type="text" placeholder="search product" />
             {/*icon */}
-            <CiSearch size={48} />
+            <CiSearch size={40} />
           </div>
 
           {/*right */}
@@ -63,7 +65,7 @@ const Header = () => {
 
             {/*orders */}
             <a href="">
-              <p>returns</p>
+              <p>Returns</p>
               <span>& orders</span>
             </a>
 
@@ -72,10 +74,12 @@ const Header = () => {
               {/*icon */}
               <BsCart size={35} />
               <span>0</span>
+              <span>cart</span>
             </a>
           </div>
         </div>
       </section>
+      <LowerHeader />
     </>
   );
 };
