@@ -3,3 +3,11 @@ npx create-react-app .
 import icons from react icon
 
 npm i react-responsive-carousel
+
+fake store API website
+npm install axios
+
+for rating:
+install material UI     
+
+npm install numeral
