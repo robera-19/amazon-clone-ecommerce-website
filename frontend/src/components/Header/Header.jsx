@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./Header.module.css";
+import { Link } from "react-router-dom";
 
 import { SlLocationPin } from "react-icons/sl";
 import { CiSearch } from "react-icons/ci";
@@ -14,12 +15,12 @@ const Header = () => {
         <div className={classes.header_container}>
           {/*ECOMMERCE LOGO */}
           <div className={classes.logo_container}>
-            <a href="/">
+            <Link to="/">
               <img
                 src="https://i.pinimg.com/1200x/47/b7/bd/47b7bdac4285ee24654ca7d68cf06351.jpg"
                 alt="ecommerce logo"
               />
-            </a>
+            </Link>
             {/*Delivery */}
             <div className={classes.delivery}>
               <span>
@@ -45,7 +46,7 @@ const Header = () => {
 
           {/*right */}
           <div className={classes.order_container}>
-            <a href="" className={classes.language}>
+            <Link to="" className={classes.language}>
               <img
                 src="https://i.pinimg.com/1200x/b2/4e/2e/b24e2ebe58598fd2898078106c231c56.jpg"
                 alt="language option"
@@ -53,29 +54,29 @@ const Header = () => {
               <select>
                 <option value="">EN</option>
               </select>
-            </a>
+            </Link>
 
             {/*three components */}
-            <a href="">
+            <Link to="/auth">
               <div>
                 <p>Sign In</p>
                 <span>Account & Lists</span>
               </div>
-            </a>
+            </Link>
 
             {/*orders */}
-            <a href="">
+            <Link to="/orders">
               <p>Returns</p>
               <span>& orders</span>
-            </a>
+            </Link>
 
             {/*cart */}
-            <a href="" className={classes.cart}>
+            <Link to="/cart" className={classes.cart}>
               {/*icon */}
               <BsCart size={35} />
               <span>0</span>
               <span>cart</span>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
