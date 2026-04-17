@@ -2,25 +2,22 @@ export const categories = [
   {
     title: "Electronics",
     name: "electronics",
-    imgLink:
-      "https://i.pinimg.com/1200x/6d/dd/64/6ddd64c3de47d48cc81a06236c50e2d6.jpg",
+    imgLink: "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_t.png",
   },
   {
-    title: "Fashion",
-    name: "fashion",
-    imgLink:
-      "https://i.pinimg.com/736x/10/3f/94/103f949e638c2c2c0dbd4db3b94ea25e.jpg",
+    title: "Discover fashion trends",
+    name: "women's clothing",
+    imgLink: "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_t.png",
   },
   {
-    title: "Home & Kitchen",
-    name: "home",
-    imgLink:
-      "https://i.pinimg.com/736x/45/c8/a3/45c8a3282e91e353b4e34a045813d764.jpg",
+    title: "Men's Clothing",
+    name: "men's clothing",
+    imgLink: "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_t.png",
   },
   {
-    title: "Health & Beauty",
-    name: "beauty",
+    title: "Jewelery",
+    name: "jewelery",
     imgLink:
-      "https://i.pinimg.com/1200x/8c/9f/a7/8c9fa7dbc6e87d9a2d83c5bf0acf7874.jpg",
+      "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_t.png",
   },
 ];
