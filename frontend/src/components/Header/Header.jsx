@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import classes from "./Header.module.css";
 import { Link } from "react-router-dom";
 
@@ -7,10 +7,16 @@ import { CiSearch } from "react-icons/ci";
 import { BsCart } from "react-icons/bs";
 
 import LowerHeader from "./LowerHeader";
+import { DataContext } from "../DataProvider/DataProvider";
 
 const Header = () => {
+
+  const [{basket}, dispatch] = useContext(DataContext)
+
+ 
+
   return (
-    <>
+    <section className={classes.fixed}>
       <section>
         <div className={classes.header_container}>
           {/*ECOMMERCE LOGO */}
@@ -74,14 +80,14 @@ const Header = () => {
             <Link to="/cart" className={classes.cart}>
               {/*icon */}
               <BsCart size={35} />
-              <span>0</span>
+              <span>{basket.length}</span>
               <span>cart</span>
             </Link>
           </div>
         </div>
       </section>
       <LowerHeader />
-    </>
+    </section>
   );
 };
 
