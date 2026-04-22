@@ -13,3 +13,5 @@ install material UI
 npm install numeral
 
 npm install react-spinners --save
+
+npm install firebase
