@@ -8,14 +8,13 @@ import { BsCart } from "react-icons/bs";
 
 import LowerHeader from "./LowerHeader";
 import { DataContext } from "../DataProvider/DataProvider";
+import { auth } from "../../Utility/firebase";
 
 const Header = () => {
-
-  const [{basket}, dispatch] = useContext(DataContext)
+  const [{ user, basket }, dispatch] = useContext(DataContext);
   const totalItem = basket?.reduce((amount, item) => {
-    return item.amount + amount
-  },0)
- 
+    return item.amount + amount;
+  }, 0);
 
   return (
     <section className={classes.fixed}>
@@ -65,10 +64,19 @@ const Header = () => {
             </Link>
 
             {/*three components */}
-            <Link to="/auth">
+            <Link to={!user && "/auth"}>
               <div>
-                <p>Sign In</p>
-                <span>Account & Lists</span>
+                {user ? (
+                  <>
+                    <p>Hello {user.email?.split("@")[0]}</p>
+                    <span onClick={() => auth.signOut()}>Sign Out</span>
+                  </>
+                ) : (
+                  <>
+                    <p>Hello, Sign In</p>
+                    <span>Account & Lists</span>
+                  </>
+                )}
               </div>
             </Link>
 
