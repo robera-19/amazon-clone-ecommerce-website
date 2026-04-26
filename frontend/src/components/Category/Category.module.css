@@ -4,6 +4,7 @@
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
 .category img {
     width: 100%;
     object-fit: contain;
@@ -13,25 +14,32 @@
 
 .category a {
     text-decoration: none;
-    color: rgb(35,35,35);
+    color: rgb(35, 35, 35);
 }
-.category h2{
+
+.category h2 {
     font-size: 20px;
     font-weight: bold;
 }
+
 .category p {
     color: rgb(70, 116, 203);
 }
+
 .category h2,
 .category p {
     padding: 5px;
     margin-left: 15px;
 }
 
-.category_container{
+.category_container {
     position: relative;
     margin-top: -25%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    max-width: 1600px;
+    gap: 50px;
+    margin-right: auto;
+    margin-left: auto;
     place-items: center;
 }
